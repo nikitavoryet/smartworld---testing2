@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<head>
+<<<<<<< HEAD
+        <link rel="stylesheet" href="css/app.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="table"></div>
+<script src="js/main.js"></script>
+=======
+<style>
+                td {
+    border: 1px solid;
+    width: 25PX;
+    height: 25PX;
+}            </style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="table"></div> 
+
+
+<script>
+                function generate( rows, cols ) {
+    var gn = "<table>";
+    for ( row = 1; row <= rows; row++ ) {
+        gn += "<tr>"
+        ; 
+        for ( col = 1; col <= cols; col++ ) {      
+            gn += "<td></td>";
+        }
+        gn += "</tr>"; 
+    }
+    return gn;
+}
+$( "#table" ).append( generate( 50, 50) );
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * 3) + 1;
+}
+    $( "td" ).text(getRandomInt);
+
+$(document).on('click','td',function(){
+      var avtor = $(this).text(); 
+      if (avtor == 1) {$( this ).css( 'background-color', 'green' );}
+      else 
+      	{
+      		if (avtor ==2) {$( this ).css( 'background-color', 'blue' );}
+      else {
+      	if (avtor ==3) {$( this ).css( 'background-color', 'red' );}
+      }
+  			}
+  });
+          </script>
+>>>>>>> 141fe59fde0b2e96cdb58aa9356210d81ca8eca7
+</body>
+</html>
